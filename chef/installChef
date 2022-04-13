@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Installing the tools chef is going to need.
+apt install software-properties-common gnupg curl wget nano acl -y
+
+cd /tmp
+
+# Download Chef
+wget -O chef.deb https://packages.chef.io/files/stable/chef-workstation/22.4.861/ubuntu/18.04/chef-workstation_22.4.861-1_amd64.deb
+
+# Install Chef
+dpkg -i chef.deb
+
+# Remove the Installer, we don't need it anymore.
+rm chef.deb

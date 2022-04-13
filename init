@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Init container
+
+# Create container
+lxc launch images:ubuntu/18.04 feeluniqueDev -c limits.memory=2048MiB 
+
+lxc exec feeluniqueDev -- /bin/bash -c "echo 'dev.feelunique.com' > /etc/hostname"
+
+# Map User Id
+printf "uid $(id -u) 1000\ngid $(id -g) 1000" | lxc config set feeluniqueDev raw.idmap -
+
+lxc restart feeluniqueDev
+
+# Mount www to /mnt on guest
+lxc config device add feeluniqueDev disk-storage-device disk source=~/www path=/mnt

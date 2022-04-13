@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Copy to tmp so we don't make a mess of the P.R. by accident.
+cp -r /mnt/frontend/tools/chef /tmp/books
+cp -r /mnt/lxc/chef /tmp/chef
+
+# Donwloads the cookbooks
+cd /tmp/books
+berks vendor /root/cookbooks
+
+# Let's run chef-solo
+cd /tmp/chef
+chef-solo -c solo.rb -j web.json --chef-license accept
+
+# Clean up the mess
+rm -rf /tmp/chef
+rm -rf /tmp/books
+
