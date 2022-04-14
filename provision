@@ -4,7 +4,7 @@ lxc exec feeluniqueDev -- /mnt/lxc/chef/installChef
 lxc exec feeluniqueDev -- /mnt/lxc/chef/doProvision
 
 # Set permissions
-lxc exec feeluniqueDev -- setfacl -Rm ubuntu:rw /mnt
-lxc exec feeluniqueDev -- setfacl -Rm www-data:rw /mnt
-lxc exec feeluniqueDev -- setfacl -d -Rm ubuntu:rwx /mnt
-lxc exec feeluniqueDev -- setfacl -d -Rm www-data:rwx /mnt
+lxc exec feeluniqueDev -- setfacl -b -R /mnt
+lxc exec feeluniqueDev -- setfacl -d -Rm g:ubuntu:rwx /mnt
+lxc exec feeluniqueDev -- setfacl -d -Rm g:www-data:rwx /mnt
+lxc exec feeluniqueDev -- setfacl -d -Rm o::rwx /mnt
