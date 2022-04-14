@@ -7,4 +7,3 @@ lxc exec feeluniqueDev -- /mnt/lxc/chef/doProvision
 lxc exec feeluniqueDev -- setfacl -b -R /mnt
 lxc exec feeluniqueDev -- setfacl -d -Rm g:ubuntu:rwx /mnt
 lxc exec feeluniqueDev -- setfacl -d -Rm g:www-data:rwx /mnt
-lxc exec feeluniqueDev -- setfacl -d -Rm o::rwx /mnt
