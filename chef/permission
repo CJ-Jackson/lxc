@@ -1,0 +1,8 @@
+#!/bin/bash
+
+setfacl -b -R /mnt
+
+find /mnt -type f -exec setfacl -m u:1000:rw,u:33:rw,g:1000:r,g:33:r {} \;
+find /mnt -type d -exec setfacl -m u:1000:rwx,u:33:rwx,g:1000:rx,g:33:rx {} \;
+find /mnt -type d -exec setfacl -d -m u:1000:rwx,u:33:rwx,g:1000:rx,g:33:rx {} \;
+
