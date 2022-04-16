@@ -1,5 +1,3 @@
 #!/bin/bash
 
-lxc stop feeluniqueDev
-lxc delete feeluniqueDev
-
+lxc start feeluniqueDev
