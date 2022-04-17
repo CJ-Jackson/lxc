@@ -1,0 +1,17 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Ensure that the script will "exit 0" on success or any other
+# value on error.
+#
+# To enable or disable this script, just change the execution
+# bits.
+#
+# By default, this script does nothing.
+
+# You may need to change the IP
+ip addr add 10.83.195.201/24 dev eth0
+
+exit 0

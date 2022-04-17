@@ -1,0 +1,4 @@
+#!/bin/bash
+
+lxc exec feeluniqueDev -- /mnt/lxc/rc/install
+lxc restart feeluniqueDev

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp /mnt/lxc/rc/rc.local /etc/rc.local
+cp /mnt/lxc/rc/rc-local.service /etc/systemd/system/rc-local.service
+
+systemctl enable rc.local
