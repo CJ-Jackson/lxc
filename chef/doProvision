@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy to tmp so we don't make a mess of the P.R. by accident.
-cp -r /mnt/frontend/tools/chef /tmp/books
+cp -r /mnt/project/tools/chef /tmp/books
 cp -r /mnt/lxc/chef /tmp/chef
 
 # Donwloads the cookbooks
