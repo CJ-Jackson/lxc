@@ -1,5 +1,5 @@
 #!/bin/bash
 
 lxc stop feeluniqueDev
-lxc snapshot feeluniqueDev backup
+lxc snapshot feeluniqueDev backup_$(date +%s)
 lxc start feeluniqueDev
