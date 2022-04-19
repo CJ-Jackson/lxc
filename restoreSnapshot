@@ -1,5 +1,0 @@
-#!/bin/bash
-
-lxc stop feeluniqueDev
-lxc restore feeluniqueDev backup
-lxc start feeluniqueDev
