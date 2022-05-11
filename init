@@ -13,4 +13,4 @@ printf "uid $(id -u) 1000\ngid $(id -g) 1000" | lxc config set feeluniqueDev raw
 lxc restart feeluniqueDev
 
 # Mount www to /mnt on guest
-lxc config device add feeluniqueDev disk-storage-device disk source=~/www path=/mnt
+lxc config device add feeluniqueDev disk-storage-device disk source=~/www/feelunique path=/mnt
